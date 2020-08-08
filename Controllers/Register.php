@@ -40,7 +40,6 @@ if ($stmt = $con->prepare('INSERT INTO User (username, password, email) VALUES (
     $stmt->bind_param('sss', $_POST['username'], $password, $_POST['username']);
     
     if ($stmt->execute()) {
-
         $response['registered'] = TRUE;
     } else {
         $response['errorMessage'] = 'There was an error with registration, please try again';

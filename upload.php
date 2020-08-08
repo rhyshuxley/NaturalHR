@@ -3,7 +3,6 @@
     if(!isset($_SESSION['loggedIn'])){ //if login in session is not set
         header("Location: /login.php");
     }
-    exit;
     require('Views/header.php');
 ?>
 
@@ -17,6 +16,9 @@
                             <div class="form-group col-md-8 offset-md-6 pl-4">
                                 <input type="file" id="file" name="file" />
                                 <label for="file">Choose a file</label>
+                            </div>
+                            <div class="message">
+                                <span class="msg"><?=$msg?></span>
                             </div>
                             <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-9">

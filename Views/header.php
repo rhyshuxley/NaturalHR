@@ -16,10 +16,12 @@
 
         <!-- Styles -->
         <link rel="stylesheet" type="text/css" href="Style/main.css">
+        <link rel="stylesheet" type="text/css" href="Style/forgot.css">
 
         <!-- Scripts -->
         <script src="js/login.js"></script>
         <script src="js/register.js"></script>
+        <script src="js/forgot.js"></script>
         
     </head>
     <body>
