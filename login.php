@@ -23,7 +23,7 @@
                             </div>
                             <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-8 pl-2">
-                                    <button type="button" class="btn btn-primary loginButton">Login</button>
+                                    <button type="submit" class="btn btn-primary loginButton">Login</button>
                                 </div>
                                 <div class="col-md-8 offset-md-5 pl-5">
                                     <a class="btn btn-sm btn-link" href="/forgot.php">Forgot Your Password?</a>

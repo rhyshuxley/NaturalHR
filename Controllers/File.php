@@ -12,11 +12,19 @@ if ($stmt = $con->prepare('SELECT * FROM Upload WHERE userId = ?')) {
     $stmt->execute();
     $result = $stmt->get_result();
 
+    // set up response
     $response['html'] = '';
-    // for each result
-    while($file = $result->fetch_assoc()){
-        // build html
-        $response['html'] .= "<tr class='row'><td class='col-8'>".basename($file['filename'])."</td><td class='col-4'>".date('jS F Y H:i:s', strtotime($file['uploadedDate']))."</td></tr>";
+
+    // if we find files
+    if ($result->num_rows > 0) {
+
+        // for each result
+        while($file = $result->fetch_assoc()){
+            // build html
+            $response['html'] .= "<tr class='row'><td class='col-8'>".basename($file['filename'])."</td><td class='col-4'>".date('jS F Y H:i:s', strtotime($file['uploadedDate']))."</td></tr>";
+        }
+    }else{
+        $response['html'] .= "<tr colspan=3 class='row'><td class='col text-center'>No files found</td></tr>";
     }
 
     $stmt->close();

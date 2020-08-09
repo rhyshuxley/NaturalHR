@@ -33,7 +33,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM User WHERE username = ?')) {
 	$stmt->execute();
     $stmt->store_result();
     
-    // if we find a Userr
+    // if we find a User
     if ($stmt->num_rows > 0) {
         $stmt->bind_result($id, $password);
         $stmt->fetch();
