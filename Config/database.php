@@ -1,8 +1,8 @@
 <?php
 // MySQL Connection Info
 $DATABASE_HOST = '127.0.0.1';
-$DATABASE_USER = 'adminNHR';
-$DATABASE_PASS = 'R8xAvx265eCa4QWs';
+$DATABASE_USER = DB_USER;
+$DATABASE_PASS = DB_PASSWORD;
 $DATABASE_NAME = 'NaturalHr';
 
 // Connect to database
