@@ -57,17 +57,6 @@ CREATE TABLE `User` (
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `User`
---
-
-LOCK TABLES `User` WRITE;
-/*!40000 ALTER TABLE `User` DISABLE KEYS */;
-INSERT INTO `User` VALUES (1,'rhyshuxley@gmail.com','$2y$10$XhKtUVXGqxN0GfWzPGitx.blsV1k/dGxikhU1r7ouhjx6zM3tBqwu','rhyshuxley@gmail.com'),(2,'rhuxley@editwebsites.co.uk','$2y$10$oFWMg0iZd6Gfz.dfVNY5l.4Np3A9J9tahkQvbbuuh1kKrSMqKAu0W','rhuxley@editwebsites.co.uk'),(3,'rhuxley@editwebsites.co.uk','$2y$10$ULgMosrTQ4bH118yAlqc4OjPJe.2L1YvCO3I1xRDBhys/JTayH/i2','rhuxley@editwebsites.co.uk'),(4,'rhyshuxley@gmail.com','$2y$10$Z2qwTwy17CwYvNyCJ9Ti8eSYX1RruoQ4pGa3BxazlmOtA5Kc7NeJu','rhyshuxley@gmail.com'),(5,'rhyshuxley@gmail.com','$2y$10$jjHYJMXetqCUXxKG/pRDQOJEkCubN0gSnVAXN7rMZpUktxv97oI5u','rhyshuxley@gmail.com'),(6,'rhyshuxley@gmail.com','$2y$10$dK.l9UCvFxkJCRWPg8VLCOMltG6RlhAhZSOuhopgBRU3u7UcqPrZO','rhyshuxley@gmail.com'),(7,'rhyshuxley@gmail.com','$2y$10$w6L8.cznzLy9NpbZpEUVd.rzRr7zQbR7EvkUjJSl2KsEXZIbQDrHW','rhyshuxley@gmail.com'),(8,'rhyshuxley@gmail.com','$2y$10$Fhlxi.wZ5YvghFJ.foBy2Odr9EaSyeMMKiG8rPvdU/eX4vnoxSxtW','rhyshuxley@gmail.com');
-/*!40000 ALTER TABLE `User` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
