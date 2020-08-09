@@ -1,3 +1,4 @@
+/* hide reset password until user is checked */
 .resetPassword {
     display: none;
 }

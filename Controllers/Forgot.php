@@ -2,31 +2,39 @@
 // Start session
 session_start();
 
+// include db config
 include('../Config/database.php');
 
 // Set up response
 $response = [];
 $response['validUser'] = FALSE;
 
-// Check for username and password
+// if username is given
 if (isset($_POST['username'])) {
-	// Prepare our SQL, preparing the SQL statement will prevent SQL injection.
+	// check for User
     if ($stmt = $con->prepare('SELECT * FROM User WHERE username = ?')) {
-        // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
         $stmt->bind_param('s', $_POST['username']);
         $stmt->execute();
         $result = $stmt->get_result();
-        $user = $result->fetch_assoc();
 
-        $response['validUser'] = TRUE;
-        $response['userId'] = $user['id'];
-
-        if(empty($response['userId'])){
-            $response['errorMessage'] = 'Unknown user';
+        // if we have a User
+        if($result->num_rows > 0){
+            $user = $result->fetch_assoc();
+    
+            // return user id
+            $response['validUser'] = TRUE;
+            $response['userId'] = $user['id'];
+        }else{
+            // if no result
+            if(empty($response['userId'])){
+                $response['errorMessage'] = 'Unknown user';
+            }
         }
+
 
         $stmt->close();
     
+        // return
         if(!empty($response)){
             echo json_encode($response);
             exit;
