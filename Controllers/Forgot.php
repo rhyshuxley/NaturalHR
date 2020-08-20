@@ -45,9 +45,9 @@ if (isset($_POST['username'])) {
 if (isset($_POST['password'])) {
     $response['updated'] = FALSE;
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-	// Prepare our SQL, preparing the SQL statement will prevent SQL injection.
+	// Update User table
     if ($stmt = $con->prepare('UPDATE User SET password = ? WHERE id = ?')) {
-        // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
+        // add new password
         $stmt->bind_param('si', $password, $_POST['userId']);
         if ($stmt->execute()) {
             $response['updated'] = TRUE;
