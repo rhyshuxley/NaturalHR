@@ -7,7 +7,6 @@ include('../Config/database.php');
 
 // get files
 if ($stmt = $con->prepare('SELECT * FROM Upload WHERE userId = ?')) {
-    // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
     $stmt->bind_param('s', $_SESSION['id']);
     $stmt->execute();
     $result = $stmt->get_result();
